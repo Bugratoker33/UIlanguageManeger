@@ -1,0 +1,9 @@
+<ul class="list-group">
+  <li (click)="setCurrentLanguage(language)" *ngFor="let language of languages" class="list-group-item">
+    {{language.name}}
+  </li>
+</ul>
+<h5 *ngIf="curentLanguga" class="alert alert-success">
+  <span>Dersinizi başarıyla seçtiniz:</span>
+  <span class="selected-language">{{curentLanguga.name}}</span>
+</h5>

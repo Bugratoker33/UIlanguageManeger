@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+      
+        <tr>
+            <th>İsim</th>
+            <th>Soy ad</th>
+            <th>Id</th>
+            <th>Ders adı</th>
+            <th>Yaş</th>
+            <th>Language ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    <tr *ngFor="let teacher of teacherResponse">
+        <td>{{teacher.name}}</td>
+        <td>{{teacher.surname}}</td>
+        <td>{{teacher.id}}</td>
+        <td>{{teacher.languageName}}</td>
+        <td>{{teacher.age}}</td>
+        <td>{{teacher.languageId}}</td>
+    </tr>
+ 
+    </tbody>
+</table>

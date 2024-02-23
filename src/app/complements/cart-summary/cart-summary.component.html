@@ -1,0 +1,13 @@
+
+<li *ngIf="cartItems.length>0" class="nav-item dropdown" ngbDropdown>
+  <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Sepetiniz
+  </a>
+    <ul class="dropdown-menu" ngbDropdownMenu>
+      <li *ngFor="let cartItem of cartItems" ngbDropdownItem>
+        <a class="dropdown-item"> <span class="badge text-bg-secondary">{{cartItem.quantity}}</span>{{ cartItem.teacher.languageName }} <span (click)="removeFromCart(cartItem.teacher)"  class="badge text-bg-secondary">Sil</span></a>
+      </li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item">Sepetiniz</a></li>
+    </ul>
+  </li>

@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th colspan="5">Teachers</th>
+        </tr>
+        <tr>
+            <th>İsim</th>
+            <th>Soy ad</th>
+            <th>Id</th>
+            <th>Ders adı</th>
+            <th>Yaş</th>
+            <th>Yaşyıl</th>
+        </tr> 
+    </thead>
+    <tbody>
+        <tr *ngFor="let teacher of teachers">
+            <td>{{teacher.name | uppercase }}</td>
+            <td>{{teacher.surname |uppercase}}</td>
+            <td>{{teacher.id}}</td>
+            <td>{{teacher.languageName}}</td>
+            <td>{{teacher.age |currency}}</td>
+            <td>{{teacher.age |vatAdded:10  }}</td>
+            <td><button (click)="addToTeacher(teacher) " type="button" class="btn btn-success btn-xs"> Dersi seç </button></td>
+        </tr>
+    </tbody>
+</table>
+
